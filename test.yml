@@ -1,0 +1,19 @@
+- name: Toltek Bbb Test
+  become: true
+  hosts: all
+  tasks:
+    - name: Tanım
+      debug:
+        msg:
+        - "IP : {{ InternalIP }}/{{ ExternalIP }}"
+#    - name: Removing test file
+#     file:
+#        path: "/home/toltek/test.txt"
+#        state: absent
+#    - name: create test file
+#      copy:
+#        dest: "/home/toltek/test.txt"
+#        content: "test content 2 - ExternalIP:{{ EIP }} - InternalIP:{{ IIP }} - BbbPath:{{ Bbb }}"
+#        mode: 0777
+#        owner: bigbluebutton
+#        group: bigbluebutton
